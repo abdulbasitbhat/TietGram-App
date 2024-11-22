@@ -1,0 +1,85 @@
+buildscript {
+    ext.kotlin_version = '1.6.10'
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+  url("$rootDir/..")
+}
+/*         maven {
+        url "https://repo.spring.io/release"
+    }
+    maven {
+        url "https://repository.jboss.org/maven2"
+    }
+     maven {
+        // Look for POMs and artifacts, such as JARs, here
+        url "http://repo2.mycompany.com/maven2"
+        // Look for artifacts here if not found at the above location
+        artifactUrls "http://repo.mycompany.com/jars"
+        artifactUrls "http://repo.mycompany.com/jars2"
+        allowInsecureProtocol = true
+    }*/
+//isAllowInsecureProtocol = true}
+       /* maven {
+      url = uri("https://plugins.gradle.org/m2/")
+    }*/
+        /*maven { url 'http://repo1.maven.org/maven2'
+        allowInsecureProtocol = true }*/
+        //jcenter()
+       /* maven { url http://repo1.maven.org/maven2 }
+}*/
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2'
+        //classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+        classpath 'com.google.gms:google-services:4.3.13'
+    }
+}
+
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+  url("$rootDir/..")
+}
+   /*      maven {
+        url "https://repo.spring.io/release"
+    }
+    maven {
+        url "https://repository.jboss.org/maven2"
+    }
+     maven {
+        // Look for POMs and artifacts, such as JARs, here
+        url "http://repo2.mycompany.com/maven2"
+        // Look for artifacts here if not found at the above location
+        artifactUrls "http://repo.mycompany.com/jars"
+        artifactUrls "http://repo.mycompany.com/jars2"
+        allowInsecureProtocol = true
+    }*/
+        
+       // mavenLocal()
+       /* maven {
+    url https://maven.google.com
+}*/
+        
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+

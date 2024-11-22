@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "347438100726",
+    "project_id": "tietg-a5276",
+    "storage_bucket": "tietg-a5276.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347438100726:android:e3608ad0a78f5045f27cd7",
+        "android_client_info": {
+          "package_name": "com.example.tietgram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347438100726-ool1vb7bavrt2qb6jlig1ld814flj33d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyfbsHH_AzNYWI9ovQ3rubuJJ2aU3ZwIY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347438100726-ool1vb7bavrt2qb6jlig1ld814flj33d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
